@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Adicionar logo abaixo da Meta Description -->
+    <meta property="og:title" content="Dr. Isaías Rufino | Advogado Militar e Servidor Público em Goiânia">
+    <meta property="og:description"
+        content="Defesa estratégica e especializada para Militares e Servidores Públicos em Goiás.">
+    <meta property="og:image" content="https://www.isaiasrufino.adv.br/logo.png">
+    <meta property="og:url" content="https://www.isaiasrufino.adv.br/">
+    <meta property="og:type" content="website">
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="ydyV3X7hlsyGH81P0a09NUqaJOzJlJcPoETigPLXJ4w" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Isaías Rufino | Advogado Militar e Servidor Público em Goiânia</title>
+    <meta name="description"
+        content="Advocacia especializada em Direito Militar e Servidores Públicos em Goiás. Defesa estratégica em PADs, promoções e direitos funcionais. Agende sua consulta!">
+
+    <!-- Tailwind CSS CDN Estável -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Vinculação do arquivo CSS Externo -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://www.isaiasrufino.adv.br/">
+</head>
+
+<body id="conteudo-principal" class="bg-[#1A1310] text-[#F4F1EA] font-sans antialiased text-base">
+
+    <!-- BARRA TOP: ACESSIBILIDADE -->
+    <div
+        class="bg-[#150F0D] border-b border-[#3D2E27] py-1.5 px-4 sm:px-6 lg:px-8 text-xs flex justify-between items-center relative z-[60]">
+        <div class="text-[#D1C7BD] hidden sm:block">Acessibilidade Ativa</div>
+        <div class="flex items-center space-x-4 mx-auto sm:mx-0">
+            <!-- Botões de Tamanho de Fonte -->
+            <button onclick="alterarFonte(1)" class="hover:text-[#D4AF37] transition-colors font-bold"
+                aria-label="Aumentar texto">[A+]</button>
+            <button onclick="alterarFonte(-1)" class="hover:text-[#D4AF37] transition-colors font-bold"
+                aria-label="Diminuir texto">[A-]</button>
+            <button onclick="resetarFonte()" class="hover:text-[10px] text-[10px]"
+                aria-label="Resetar tamanho de texto">Normal</button>
+            <span class="text-[#3D2E27]">|</span>
+            <!-- Botão de Contraste -->
+            <button onclick="alternarContraste()"
+                class="hover:text-[#D4AF37] transition-colors flex items-center space-x-1"
+                aria-label="Alternar alto contraste">
+                <span>◑</span> <span class="hidden xs:inline">Contraste</span>
+            </button>
+            <span class="text-[#3D2E27]">|</span>
+            <!-- Botão Ouvir Página Completa -->
+            <button onclick="lerSecao('conteudo-principal')"
+                class="bg-[#3D2E27] hover:bg-[#B8860B] hover:text-[#1A1310] px-2 py-0.5 rounded transition-colors flex items-center space-x-1"
+                aria-label="Ouvir texto da página">
+                <span>🔊</span> <span>Ouvir Site</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- CABEÇALHO (NAVBAR COMPACTA E MODERNA) -->
+    <header class="fixed top-7 left-0 w-full bg-[#261C18]/95 border-b border-[#3D2E27] z-50 backdrop-blur-md">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+
+            <!-- 1. Esquerda: Identificação Simples -->
+            <div class="flex items-center">
+                <a href="#inicio"
+                    class="group relative text-xs font-bold text-white tracking-widest uppercase font-serif-premium hover:text-[#D4AF37] transition-colors py-2">
+
+                    ISAÍAS RUFINO ADVOCACIA
+
+                    <!-- BALÃOZINHO DE DESCRIÇÃO (Aparece instantaneamente ao passar o mouse) -->
+                    <span
+                        class="absolute left-0 top-full mt-2 scale-0 group-hover:scale-100 transition-all duration-150 origin-top bg-[#261C18] text-[#D4AF37] text-[10px] tracking-normal normal-case font-sans whitespace-nowrap px-3 py-1.5 rounded border border-[#D4AF37]/30 shadow-xl pointer-events-none z-50">
+                        Logomarca Oficial do Escritório Dr. Isaías Rufino Advocacia
+                    </span>
+                </a>
+            </div>
+
+            <!-- 2. Centro: Menu de Navegação -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#inicio"
+                    class="text-xs font-semibold text-[#D1C7BD] hover:text-[#D4AF37] transition-colors uppercase tracking-wider">Início</a>
+                <a href="#sobre"
+                    class="text-xs font-semibold text-[#D1C7BD] hover:text-[#D4AF37] transition-colors uppercase tracking-wider">Sobre</a>
+                <a href="#atuacao"
+                    class="text-xs font-semibold text-[#D1C7BD] hover:text-[#D4AF37] transition-colors uppercase tracking-wider">Atuação</a>
+                <a href="#depoimentos"
+                    class="text-xs font-semibold text-[#D1C7BD] hover:text-[#D4AF37] transition-colors uppercase tracking-wider">Depoimentos</a>
+                <a href="#consulta"
+                    class="text-xs font-semibold text-[#D1C7BD] hover:text-[#D4AF37] transition-colors uppercase tracking-wider">Processos</a>
+                <a href="#materias"
+                    class="text-xs font-semibold text-[#D1C7BD] hover:text-[#D4AF37] transition-colors uppercase tracking-wider">Matérias</a>
+                <a href="#faq"
+                    class="text-xs font-semibold text-[#D1C7BD] hover:text-[#D4AF37] transition-colors uppercase tracking-wider">Dúvidas</a>
+            </nav>
+
+            <!-- 3. Direita: Botão Rápido -->
+            <div class="hidden md:block">
+                <a href="https://wa.me/5562984430101?text=Olá,%20Dr.%20Isaías.%20Gostaria%20de%20agendar%20uma%20consulta%20jurídica."
+                    target="_blank"
+                    class="border border-[#B8860B] text-[#B8860B] hover:bg-[#B8860B] hover:text-[#1A1310] px-4 py-1.5 rounded text-xs font-bold transition-all tracking-wide uppercase">
+                    Contato
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio"
+        class="relative min-h-[85vh] flex items-center bg-[#150F0D] pt-32 pb-20 border-b border-[#261C18] overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#261C18_0%,transparent_60%)] opacity-70">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <!-- Grid alterado para 3 colunas em telas grandes -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+
+                <!-- Coluna 1: Logo -->
+                <div class="flex justify-center lg:justify-start flex-shrink-0">
+                    <img src="logo.png" alt="Logomarca Oficial - Dr. Isaías Rufino Advocacia Militar" loading="lazy"
+                        class="w-56 sm:w-64 max-w-[320px] h-auto object-contain transition duration-300 hover:scale-105">
+                </div>
+
+                <!-- Coluna 2: Conteúdo -->
+                <div class="space-y-5 text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center gap-2 border border-[#3D2E27] bg-[#1A1310] px-3 py-1 rounded text-[11px] text-[#D4AF37] tracking-widest uppercase font-semibold">
+                        ⚖ Advocacia de Alta Performance
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
+                        Defesa Rigorosa e Estratégica para <span class="text-[#D4AF37]">Militares</span> e <span
+                            class="text-[#D4AF37]">Servidores Públicos</span>
+                    </h1>
+                    <p class="text-[#D1C7BD] text-base leading-relaxed">
+                        Protegendo as prerrogativas, a carreira e os direitos funcionais de quem dedica a vida à
+                        sociedade. Atuação técnica especializada perante o Poder Judiciário em todo o Estado de Goiás.
+                    </p>
+                </div>
+
+
+    </section>
+
+    <!-- Espaçador técnico -->
+    <div class="h-32"></div>
+
+    <!-- SEÇÃO SOBRE O ADVOGADO -->
+    <section id="sobre" class="py-16 bg-[#1A1310] border-b border-[#261C18]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <button onclick="lerSecao('sobre')"
+                class="text-xs text-[#D4AF37] underline mb-4 flex items-center space-x-1 block"
+                aria-label="Ouvir seção Sobre"><span>🔊</span> <span>Ouvir Seção</span></button>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Coluna da Foto -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative group max-w-sm lg:max-w-full cursor-pointer">
+                        <div
+                            class="absolute -inset-2 bg-gradient-to-r from-[#B8860B] to-[#D4AF37] rounded-lg opacity-30 blur-sm group-hover:opacity-50 transition duration-300">
+                        </div>
+
+                        <img src="foto_apresentacao_2.png"
+                            alt="Dr. Isaías Rufino, advogado especialista em defesa de militares e servidores públicos em Goiânia"
+                            loading="lazy"
+                            class="relative rounded-lg shadow-2xl border border-[#3D2E27] object-cover w-full h-[520px] filter contrast-105 object-top">
+
+                        <div
+                            class="absolute bottom-4 left-4 right-4 bg-[#150F0D]/90 backdrop-blur-sm border border-[#3D2E27] px-4 py-2 rounded shadow-xl opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-20 text-center">
+                            <p class="text-xs font-bold text-[#D4AF37] tracking-wider uppercase font-serif-premium">Dr.
+                                Isaías Rufino</p>
+                            <p class="text-[11px] text-[#D1C7BD] mt-0.5">Advogado Especialista</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna do Texto -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="space-y-2">
+                        <span class="text-[#D4AF37] text-xs font-semibold tracking-widest uppercase block">Perfil
+                            Profissional</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Quem é o Dr. Isaías Rufino?
+                        </h2>
+                        <p class="text-[#D4AF37] font-medium text-lg">Da caserna aos tribunais: a experiência de quem
+                            viveu a realidade do servidor público na pele.</p>
+                    </div>
+
+                    <div class="text-[#D1C7BD] space-y-4 leading-relaxed">
+                        <p>Sou <strong class="text-white">Isaías Rufino</strong>, Sargento Veterano da Polícia Militar
+                            do Estado de Goiás (PMGO) com quase 30 anos de dedicação e superação no serviço público.</p>
+                        <p>Após encerrar honrosamente minha carreira militar, decidi canalizar toda a experiência
+                            prática adquirida na caserna para uma nova missão: <strong class="text-white">defender
+                                juridicamente aqueles que dedicam suas vidas à sociedade</strong>.</p>
+                        <p>Hoje, como advogado especialista em <strong class="text-[#D4AF37]">Direito Militar e Direitos
+                                dos Servidores Públicos</strong>, atuo de forma técnica, ética e estratégica tanto na
+                            esfera administrativa quanto no Poder Judiciário em todo o estado de Goiás.</p>
+                        <p>Com amplo histórico prático, guio policiais militares, bombeiros e servidores estaduais no
+                            resgate de direitos fundamentais assegurados por lei, como a Licença-Prêmio, promoções de
+                            carreira e revisões de atos disciplinares.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-[#3D2E27]">
+                        <div class="p-4 bg-[#261C18] rounded-lg border border-[#3D2E27]">
+                            <div class="text-[#D4AF37] font-bold text-base mb-1">⭐ Vivência Real</div>
+                            <p class="text-xs text-[#D1C7BD]">Quase 30 anos dentro da PMGO.</p>
+                        </div>
+                        <div class="p-4 bg-[#261C18] rounded-lg border border-[#3D2E27]">
+                            <div class="text-[#D4AF37] font-bold text-base mb-1">🛡️ Foco Exclusivo</div>
+                            <p class="text-xs text-[#D1C7BD]">Defesa de PM, BM e Servidores.</p>
+                        </div>
+                        <div class="p-4 bg-[#261C18] rounded-lg border border-[#3D2E27]">
+                            <div class="text-[#D4AF37] font-bold text-base mb-1">📈 Resultados</div>
+                            <p class="text-xs text-[#D1C7BD]">Direitos e prerrogativas restabelecidos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO ATUAÇÃO -->
+    <section id="atuacao" class="py-24 bg-[#261C18] border-b border-[#3D2E27]">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center md:text-left mb-16">
+                <span class="text-xs tracking-[0.2em] text-[#D4AF37] font-semibold uppercase">Serviços Jurídicos</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white font-serif-premium mt-2">Áreas de Especialidade
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+                <div class="md:col-span-8 order-2 md:order-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Card 01 -->
+                    <div
+                        class="bg-[#1A1310]/60 border border-[#3D2E27] p-6 rounded hover:border-[#D4AF37]/50 transition-colors group">
+                        <div class="text-[#D4AF37] text-xl font-bold mb-3">01</div>
+                        <h3
+                            class="text-white font-semibold text-base mb-2 group-hover:text-[#D4AF37] transition-colors">
+                            Direito Disciplinar</h3>
+                        <p class="text-[#D1C7BD] text-xs leading-relaxed">Defesa estratégica e técnica em PAD,
+                            Sindicâncias, Conselhos de Disciplina e Justificação.</p>
+                    </div>
+                    <!-- Card 02 -->
+                    <div
+                        class="bg-[#1A1310]/60 border border-[#3D2E27] p-6 rounded hover:border-[#D4AF37]/50 transition-colors group">
+                        <div class="text-[#D4AF37] text-xl font-bold mb-3">02</div>
+                        <h3
+                            class="text-white font-semibold text-base mb-2 group-hover:text-[#D4AF37] transition-colors">
+                            Direitos de Carreira</h3>
+                        <p class="text-[#D1C7BD] text-xs leading-relaxed">Ações corretivas para preterição em promoções,
+                            ressarcimento de preterição e evolução funcional.</p>
+                    </div>
+                    <!-- Card 03 -->
+                    <div
+                        class="bg-[#1A1310]/60 border border-[#3D2E27] p-6 rounded hover:border-[#D4AF37]/50 transition-colors group">
+                        <div class="text-[#D4AF37] text-xl font-bold mb-3">03</div>
+                        <h3
+                            class="text-white font-semibold text-base mb-2 group-hover:text-[#D4AF37] transition-colors">
+                            Benefícios Retidos</h3>
+                        <p class="text-[#D1C7BD] text-xs leading-relaxed">Cobrança e garantia de Licença-Prêmio não
+                            gozada, indenizações e revisão justa de proventos.</p>
+                    </div>
+                    <!-- Card 04 -->
+                    <div
+                        class="bg-[#1A1310]/60 border border-[#3D2E27] p-6 rounded hover:border-[#D4AF37]/50 transition-colors group">
+                        <div class="text-[#D4AF37] text-xl font-bold mb-3">04</div>
+                        <h3
+                            class="text-white font-semibold text-base mb-2 group-hover:text-[#D4AF37] transition-colors">
+                            Atos do Estado</h3>
+                        <p class="text-[#D1C7BD] text-xs leading-relaxed">Anulação de punições disciplinares abusivas ou
+                            ilegais e reabilitação de comportamento funcional.</p>
+                    </div>
+                </div>
+
+                <!-- Coluna Lateral da Imagem -->
+                <div class="md:col-span-4 order-1 md:order-2 flex justify-center md:justify-start md:-ml-4 h-full">
+                    <div
+                        class="relative w-full max-w-[240px] h-[440px] rounded border border-[#3D2E27] bg-[#1A1310] overflow-hidden shadow-xl group cursor-pointer">
+                        <img src="cliente_vereador.png"
+                            alt="Dr. Isaías Rufino em atendimento no seu escritório de advocacia em Goiânia"
+                            loading="lazy"
+                            class="w-full h-full object-cover opacity-95 group-hover:scale-105 transition duration-500 object-top">
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-[#261C18] via-transparent to-transparent opacity-40">
+                        </div>
+
+                        <div
+                            class="absolute bottom-4 left-3 right-3 bg-[#150F0D]/95 backdrop-blur-sm border border-[#3D2E27] px-3 py-2 rounded shadow-xl opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-20 text-center">
+                            <p class="text-xs font-bold text-[#D4AF37] tracking-wider uppercase font-serif-premium">
+                                Parceria e Confiança</p>
+                            <p class="text-[10px] text-[#D1C7BD] mt-0.5 leading-tight">Dr. Isaías Rufino com Arnaldo
+                                Leite de Souza</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO AVALIAÇÕES (DEPOIMENTOS) -->
+    <section id="depoimentos" class="py-24 bg-[#150F0D] border-b border-[#261C18]">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <button onclick="lerSecao('depoimentos')"
+                class="text-xs text-[#D4AF37] underline mb-4 flex items-center space-x-1 block mx-auto md:mx-0"
+                aria-label="Ouvir depoimentos de clientes">
+                <span>🔊</span> <span>Ouvir Seção</span>
+            </button>
+
+            <div class="text-center mb-16">
+                <span class="text-xs tracking-[0.2em] text-[#D4AF37] font-semibold uppercase">Reconhecimento</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white font-serif-premium mt-2">Depoimentos de Clientes
+                </h2>
+                <div class="flex justify-center gap-1 mt-3">
+                    <span class="text-[#D4AF37]">★</span><span class="text-[#D4AF37]">★</span><span
+                        class="text-[#D4AF37]">★</span><span class="text-[#D4AF37]">★</span><span
+                        class="text-[#D4AF37]">★</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Depoimento 1 -->
+                <div
+                    class="bg-[#1A1310] border border-[#3D2E27] p-6 rounded shadow-md flex flex-col justify-between hover:border-[#D4AF37]/40 transition-all duration-300">
+                    <div>
+                        <div class="flex gap-1 mb-4 text-xs text-[#D4AF37]">★★★★★</div>
+                        <p class="text-[#D1C7BD] text-xs leading-relaxed italic">
+                            "Excelente profissional. Atuação extremamente técnica e transparente na defense dos meus
+                            direitos funcionais como servidor. Recomendo confiantemente."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-[#261C18]">
+                        <h3 class="text-white font-semibold text-sm">M. Silva</h3>
+                        <p class="text-[#D4AF37] text-[10px] uppercase tracking-wider mt-0.5">Servidor Público Estadual
+                        </p>
+                    </div>
+                </div>
+                <!-- Depoimento 2 -->
+                <div
+                    class="bg-[#1A1310] border border-[#3D2E27] p-6 rounded shadow-md flex flex-col justify-between hover:border-[#D4AF37]/40 transition-all duration-300">
+                    <div>
+                        <div class="flex gap-1 mb-4 text-xs text-[#D4AF37]">★★★★★</div>
+                        <p class="text-[#D1C7BD] text-xs leading-relaxed italic">
+                            "O Dr. Isaías demonstrou profundo conhecimento na legislação militar. Conduziu o processo
+                            administrativo de forma impecável, trazendo segurança em cada etapa."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-[#261C18]">
+                        <h3 class="text-white font-semibold text-sm">R. Oliveira</h3>
+                        <p class="text-[#D4AF37] text-[10px] uppercase tracking-wider mt-0.5">Policial Militar</p>
+                    </div>
+                </div>
+                <!-- Depoimento 3 -->
+                <div
+                    class="bg-[#1A1310] border border-[#3D2E27] p-6 rounded shadow-md flex flex-col justify-between hover:border-[#D4AF37]/40 transition-all duration-300">
+                    <div>
+                        <div class="flex gap-1 mb-4 text-xs text-[#D4AF37]">★★★★★</div>
+                        <p class="text-[#D1C7BD] text-xs leading-relaxed italic">
+                            "Atendimento humanizado e estratégico. Uma defesa rigorosa que fez toda a diferença para
+                            resguardar as minhas prerrogativas na carreira."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-[#261C18]">
+                        <h3 class="text-white font-semibold text-sm">A. Costa</h3>
+                        <p class="text-[#D4AF37] text-[10px] uppercase tracking-wider mt-0.5">Servidor Público Federal
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO CONSULTA DE PROCESSOS -->
+    <section id="consulta" class="py-16 bg-[#261C18] border-b border-[#3D2E27]">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-6">
+            <button onclick="lerSecao('consulta')"
+                class="text-xs text-[#D4AF37] underline mx-auto flex items-center space-x-1 block"
+                aria-label="Ouvir seção de acompanhamento de processos"><span>🔊</span> <span>Ouvir
+                    Seção</span></button>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white">Acompanhe Seu Processo em Andamento</h2>
+            <p class="text-[#D1C7BD] max-w-2xl mx-auto text-sm">
+                Em respeito à transparência e agilidade, disponibilizamos o acesso direto aos principais sistemas de
+                consulta processual jurídica do estado de Goiás. Tenha o número do seu processo em mãos.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto pt-4">
+                <a href="https://projudi.tjgo.jus.br/BuscaProcesso?PaginaAtual=4&amp;TipoConsultaProcesso=24"
+                    target="_blank"
+                    class="p-4 bg-[#1A1310] border border-[#3D2E27] rounded-md text-sm font-semibold hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all flex flex-col items-center justify-center space-y-1">
+                    <span>⚖ Consulta Processual (Projudi)</span>
+                    <span class="text-xs font-normal text-[#D1C7BD]">Ações Judiciais e Juizados</span>
+                </a>
+                <a href="https://www.tjgo.jus.br/index.php/processo-administrativos/processo-administrativo-digital"
+                    target="_blank"
+                    class="p-4 bg-[#1A1310] border border-[#3D2E27] rounded-md text-sm font-semibold hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all flex flex-col items-center justify-center space-y-1">
+                    <span>📂 Processo Administrativo Digital</span>
+                    <span class="text-xs font-normal text-[#D1C7BD]">Sindicâncias, PADs e Requerimentos</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO MARKETING DE CONTEÚDO E CONVERSÃO -->
+<section id="materias" class="py-16 bg-[#1A1310] border-b border-[#261C18]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        
+        <!-- Cabeçalho da Seção -->
+        <div class="text-center">
+            <span class="text-[#D4AF37] text-xs font-semibold tracking-widest uppercase block">Soluções Jurídicas</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mt-2">Conteúdo Estratégico e Simulação</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Coluna 1: Vídeo Explicativo -->
+            <div class="p-6 bg-[#261C18] border border-[#3D2E27] rounded-lg flex flex-col">
+                <h3 class="text-white font-bold text-lg mb-4 text-center">Entenda seus Direitos</h3>
+                <div class="aspect-video w-full mb-4">
+    <iframe class="w-full h-full rounded" 
+        src="https://www.youtube.com/embed/_kUt9IGffRM" 
+        title="Explicação Consignado" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+</div>
+                <p class="text-[#D1C7BD] text-sm leading-relaxed">Assista ao vídeo explicativo sobre a legalidade dos descontos em seu consignado e como identificar abusos.</p>
+            </div>
+
+            <!-- Coluna 2: A Calculadora -->
+            <div id="bloco-calculadora" class="bg-[#261C18] p-6 rounded-lg border border-[#3D2E27] shadow-xl flex flex-col">
+                <h3 class="text-[#D4AF37] font-bold text-lg mb-4 uppercase tracking-widest text-center">Simulador</h3>
+                <div class="space-y-3">
+                    <input type="number" id="valorEmprestimo" placeholder="Valor do Empréstimo (R$)" class="w-full p-2 bg-[#1A1310] border border-[#3D2E27] text-white rounded text-sm">
+                    <input type="number" id="valorParcela" placeholder="Valor da Parcela (R$)" class="w-full p-2 bg-[#1A1310] border border-[#3D2E27] text-white rounded text-sm">
+                    <input type="number" id="qtdParcelas" placeholder="Qtd. de Parcelas" class="w-full p-2 bg-[#1A1310] border border-[#3D2E27] text-white rounded text-sm">
+                    <button onclick="calcularRestituicao()" class="w-full bg-[#B8860B] hover:bg-[#D4AF37] text-[#1A1310] font-bold py-2 rounded transition-all text-sm">Calcular</button>
+                </div>
+                
+                <!-- Resultado (Hidden inicialmente) -->
+                <div id="resultadoCalculadora" class="mt-4 p-3 bg-[#150F0D] border border-[#D4AF37]/50 rounded hidden">
+                    <p class="text-[#D1C7BD] text-xs text-center">Estimativa: <span id="valorEstimado" class="text-[#D4AF37] font-bold text-lg block"></span></p>
+                    <input type="text" id="nomeLead" placeholder="Seu nome" class="w-full mt-2 p-2 bg-[#1A1310] border border-[#3D2E27] text-white text-xs">
+                    <input type="tel" id="whatsappLead" placeholder="Seu WhatsApp" class="w-full mt-2 p-2 bg-[#1A1310] border border-[#3D2E27] text-white text-xs">
+                    <button onclick="enviarParaCRM()" class="mt-3 w-full bg-[#3D2E27] text-white font-bold py-2 rounded text-xs">Enviar Dados</button>
+                </div>
+            </div>
+
+            <!-- Coluna 3: Chamada para Ação (CTA) -->
+            <div class="p-6 bg-[#261C18] border border-[#3D2E27] rounded-lg flex flex-col justify-center items-center text-center space-y-4">
+                <h3 class="text-white font-bold text-lg">Precisa de Análise Técnica?</h3>
+                <p class="text-[#D1C7BD] text-sm">Nossa equipe está pronta para realizar um diagnóstico detalhado do seu contrato.</p>
+                <a href="https://wa.me/5562984430101?text=Olá,%20Dr.%20Isaías.%20Vi%20a%20calculadora%20no%20site%20e%20gostaria%20de%20uma%20análise." 
+                   target="_blank" 
+                   class="w-full bg-[#B8860B] hover:bg-[#D4AF37] text-[#1A1310] font-bold py-3 rounded transition-all text-sm uppercase tracking-widest">
+                   Falar no WhatsApp
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- SEÇÃO FAQ -->
+    <section id="faq" class="py-16 bg-[#261C18] border-b border-[#3D2E27]">
+        <div class="max-w-3xl mx-auto px-4 space-y-8">
+            <div class="text-center">
+                <span class="text-[#D4AF37] text-xs font-semibold tracking-widest uppercase block">Respostas
+                    Rápidas</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Perguntas Frequentes (FAQ)</h2>
+                <button onclick="lerSecao('faq')"
+                    class="text-xs text-[#D4AF37] underline mx-auto mt-2 flex items-center space-x-1"
+                    aria-label="Ouvir perguntas frequentes"><span>🔊</span> <span>Ouvir Seção</span></button>
+            </div>
+
+            <div class="space-y-4">
+                <div class="border border-[#3D2E27] bg-[#1A1310] rounded-md p-4">
+                    <h3 class="font-semibold text-white text-base">1. Como funciona a primeira consulta com o Dr.
+                        Isaías?</h3>
+                    <p class="text-sm text-[#D1C7BD] mt-2 leading-relaxed">
+                        O primeiro atendimento pode ser feito de forma presencial ou totalmente online por chamada de
+                        vídeo. Analisamos detalhadamente a documentação funcional do servidor ou militar para
+                        identificar o direito violado antes de propor qualquer medida jurídica.
+                    </p>
+                </div>
+                <div class="border border-[#3D2E27] bg-[#1A1310] rounded-md p-4">
+                    <h3 class="font-semibold text-white text-base">2. Atendem servidores públicos de outras cidades além
+                        da capital?</h3>
+                    <p class="text-sm text-[#D1C7BD] mt-2 leading-relaxed">
+                        Sim. Devido à digitalização completa dos tribunais modernos e dos sistemas de processo
+                        eletrônico (PJe), nosso escritório atende de forma estratégica e realiza defesas de servidores
+                        públicos e militares em qualquer comarca de Goiás.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ CORPORATIVO -->
+    <footer class="bg-[#150F0D] text-[#D1C7BD] py-12 border-t border-[#261C18]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-4">
+                <h3 class="text-white font-bold text-base tracking-wide uppercase">Isaías Rufino</h3>
+                <p class="text-xs leading-relaxed max-w-xs">
+                    Advocacia voltada à defesa rigorosa, ética e especializada de Policiais, Bombeiros e Servidores
+                    Públicos do Estado de Goiás.
+                </p>
+                <div class="flex items-center space-x-6 pt-3 text-xl">
+                    <a href="https://www.instagram.com/isaiasrufinoadvogados/" target="_blank" aria-label="Instagram"
+                        class="text-[#D1C7BD] hover:text-[#D4AF37] transition-all duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/rufino.isaias" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook"
+                        class="inline-block text-[#D1C7BD] hover:text-[#D4AF37] transition-all duration-300 relative z-10">
+                        <i class="fab fa-facebook-f pointer-events-none"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/isaias-rufino-souza-0a953423b/" target="_blank"
+                        aria-label="LinkedIn" class="text-[#D1C7BD] hover:text-[#D4AF37] transition-all duration-300">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <h3 class="text-white font-bold text-base tracking-wide uppercase">Contatos Oficiais</h3>
+                <ul class="text-xs space-y-2">
+                    <li>
+                        <strong class="text-white">E-mail:</strong>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=isaiasrufinoadv@gmail.com"
+                            target="_blank" class="hover:text-[#D4AF37] transition-colors underline">
+                            isaiasrufinoadv@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <strong class="text-white">Telefone:</strong>
+                        <a href="tel:+556236617585" class="hover:text-[#D4AF37] transition-colors underline">
+                            (62) 3661-7585
+                        </a>
+                    </li>
+                    <li>
+                        <strong class="text-white">WhatsApp de Plantão:</strong>
+                        <a href="https://wa.me/5562984430101?text=Olá,%20Dr.%20Isaías.%20Gostaria%20de%20agendar%20uma%20consulta%20jurídica."
+                            target="_blank" class="hover:text-[#D4AF37] transition-colors underline">
+                            (62) 98443-0101
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="space-y-3">
+                <h3 class="text-white font-bold text-base tracking-wide uppercase">Escritório Físico</h3>
+                <p class="text-xs leading-relaxed">
+                    Rua 86-B, Qd 33, Lt 5, N° 75, Setor Sul<br>
+                    Goiânia - GO, CEP: 74083-350.
+                </p>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-[#261C18] text-center text-[10px] text-[#3D2E27]">
+            <p>© 2026 Isaías Rufino Advocacia. Todos os direitos reservados. Em conformidade com as diretrizes de ética
+                da OAB e LGPD.</p>
+        </div>
+    </footer>
+
+    <!-- Vinculação do arquivo JavaScript Externo -->
+    <script src="script.js"></script>
+</body>
+
+</html>
