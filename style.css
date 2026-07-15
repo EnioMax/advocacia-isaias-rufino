@@ -4,7 +4,7 @@
 
 html {
     /* Garante a rolagem suave ao clicar nos links do menu */
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
     /* Transição suave ao alterar o tamanho da fonte pelos botões de acessibilidade */
     transition: font-size 0.2s ease;
 }
@@ -48,6 +48,7 @@ html {
 /* Força elementos de texto importantes, links e botões a ficarem em Amarelo Puro (Contraste Máximo) */
 .alto-contraste a, 
 .alto-contraste button, 
+.alto-contraste h1,
 .alto-contraste h2, 
 .alto-contraste h3,
 .alto-contraste strong, 
@@ -55,8 +56,8 @@ html {
     color: #FFFF00 !important;
 }
 
-/* Aplica um filtro na foto de perfil e na logo para melhorar a distinção de bordas no modo escuro total */
+/* Correção de filtro: Grayscale e alto contraste nativos aplicados corretamente */
 .alto-contraste img {
-    filter: grayscale(100%) contrast(140%) border-inverse !important;
+    filter: grayscale(100%) contrast(150%) !important;
     border: 2px solid #FFFFFF !important;
 }
