@@ -1,20 +1,9 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.isaiasrufino.adv.br/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.isaiasrufino.adv.br/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
->>>>>>> 2628f1bf274992b86616dd1132200215ce24e278
 </urlset>
