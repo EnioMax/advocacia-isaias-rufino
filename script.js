@@ -1,4 +1,4 @@
-// 1. Funções de Acessibilidade
+// 1. Funções de Acessibilidade (mantidas)
 let tamanhoBase = 100;
 function alterarFonte(direcao) {
     tamanhoBase += (direcao * 10);
@@ -14,30 +14,36 @@ function alternarContraste() {
     document.documentElement.classList.toggle('alto-contraste');
 }
 
-// 2. Lógica da Calculadora
+// 2. NOVA FUNÇÃO DE LIMPEZA (Essencial)
+function limparValor(valor) {
+    // Remove tudo que não é número, vírgula ou ponto
+    let valorLimpo = valor.replace(/\./g, '').replace(',', '.');
+    return parseFloat(valorLimpo);
+}
+
+// 3. Lógica da Calculadora Corrigida
 function calcularRestituicao() {
-    const vEmp = parseFloat(document.getElementById('valorEmprestimo').value);
-    const vPar = parseFloat(document.getElementById('valorParcela').value);
+    // Usando a função limparValor agora
+    const vEmp = limparValor(document.getElementById('valorEmprestimo').value);
+    const vPar = limparValor(document.getElementById('valorParcela').value);
     const qPar = parseFloat(document.getElementById('qtdParcelas').value);
 
     if (isNaN(vEmp) || isNaN(vPar) || isNaN(qPar)) {
-        alert("Por favor, preencha todos os campos da simulação.");
+        alert("Por favor, preencha todos os campos da simulação corretamente.");
         return;
     }
 
-    // Lógica realista: Foca nos juros pagos (diferença entre o que foi pago e o capital)
     const totalPago = vPar * qPar;
     const jurosPagos = totalPago - vEmp;
     
-    // Estimativa de abusividade: 15% dos juros pagos como indício médio de mercado
+    // Estimativa de abusividade
     const estimativa = jurosPagos * 0.15;
 
-    // Atualiza o valor mantendo a formatação visual e exibindo o resultado
     document.getElementById('valorEstimado').innerText = "R$ " + estimativa.toLocaleString('pt-BR', {minimumFractionDigits: 2});
     document.getElementById('resultadoCalculadora').classList.remove('hidden');
 }
 
-// 3. Integração com Trello
+// 4. Integração com Trello (mantida)
 async function enviarParaCRM() {
     const nome = document.getElementById('nomeLead').value;
     const whats = document.getElementById('whatsappLead').value;
