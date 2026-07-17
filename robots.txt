@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 User-agent: *
 Allow: /
 
 Sitemap: https://www.isaiasrufino.adv.br/sitemap.xml
-=======
-User-agent: *
-Allow: /
-
-Sitemap: https://www.isaiasrufino.adv.br/sitemap.xml
->>>>>>> 2628f1bf274992b86616dd1132200215ce24e278
