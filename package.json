@@ -1,0 +1,13 @@
+{
+  "name": "site-isaias-rufino",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build de produção do Tailwind CSS para o site do Dr. Isaías Rufino",
+  "scripts": {
+    "build": "tailwindcss -i ./tailwind-input.css -o ./tailwind-generated.css --minify",
+    "watch": "tailwindcss -i ./tailwind-input.css -o ./tailwind-generated.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
+  }
+}

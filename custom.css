@@ -1,0 +1,63 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GLOBAIS E COMPORTAMENTO
+   ========================================================================== */
+
+html {
+    /* Garante a rolagem suave ao clicar nos links do menu */
+    scroll-behavior: smooth !important;
+    /* Transição suave ao alterar o tamanho da fonte pelos botões de acessibilidade */
+    transition: font-size 0.2s ease;
+}
+
+/* Customização sutil da barra de rolagem lateral para combinar com o tema escuro */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #150F0D;
+}
+::-webkit-scrollbar-thumb {
+    background: #3D2E27;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #B8860B;
+}
+
+/* ==========================================================================
+   REGRAS DO MODO ALTO CONTRASTE (ACESSIBILIDADE VISUAL)
+   ========================================================================== */
+
+/* Quando a classe .alto-contraste é injetada no body via JS, estas regras anulam o Tailwind */
+.alto-contraste {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+/* Força fundos pretos e bordas brancas em todas as seções e blocos */
+.alto-contraste section,
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste div,
+.alto-contraste article {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+}
+
+/* Força elementos de texto importantes, links e botões a ficarem em Amarelo Puro (Contraste Máximo) */
+.alto-contraste a,
+.alto-contraste button,
+.alto-contraste h1,
+.alto-contraste h2,
+.alto-contraste h3,
+.alto-contraste strong,
+.alto-contraste span {
+    color: #FFFF00 !important;
+}
+
+/* Correção de filtro: Grayscale e alto contraste nativos aplicados corretamente */
+.alto-contraste img {
+    filter: grayscale(100%) contrast(150%) !important;
+    border: 2px solid #FFFFFF !important;
+}
