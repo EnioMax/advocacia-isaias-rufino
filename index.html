@@ -35,45 +35,93 @@
     <link rel="stylesheet" href="custom.css">
     <link rel="canonical" href="https://www.isaiasrufino.adv.br/">
 
-    <!-- Schema.org (JSON-LD) para SEO - Advogado / Escritório de Advocacia -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Attorney",
-      "name": "Isaías Rufino Advocacia",
-      "alternateName": "Isaías Rufino Advogados & Associados",
-      "image": "https://www.isaiasrufino.adv.br/logo.webp",
-      "url": "https://www.isaiasrufino.adv.br/",
-      "telephone": "+5562984430101",
-      "email": "isaiasrufinoadv@gmail.com",
-      "description": "Advocacia especializada em Direito Militar e Direitos de Servidores Públicos em Goiás. Defesa estratégica em PADs, sindicâncias, promoções e revisão de atos disciplinares.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "R. 86-B, 75 - Qd. 33, Lt. 05 - St. Sul",
-        "addressLocality": "Goiânia",
-        "addressRegion": "GO",
-        "postalCode": "74085-350",
-        "addressCountry": "BR"
-      },
-      "areaServed": {
-        "@type": "State",
-        "name": "Goiás"
-      },
-      "priceRange": "$$",
-      "sameAs": [
-        "https://www.instagram.com/isaiasrufinoadvogados/",
-        "https://www.facebook.com/isaiasrufinoadv/",
-        "https://www.linkedin.com/in/isaias-rufino-souza-0a953423b/"
-      ],
-      "knowsAbout": [
-        "Direito Militar",
-        "Direito Administrativo Disciplinar",
-        "Direitos de Servidores Públicos",
-        "Processo Administrativo Disciplinar (PAD)",
-        "Revisão de Proventos e Licença-Prêmio"
-      ]
-    }
-    </script>
+    <!-- Schema.org (JSON-LD) para SEO - Escritório de Advocacia (LegalService) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "@id": "https://www.isaiasrufino.adv.br/#organizacao",
+  "name": "Isaías Rufino Advocacia",
+  "alternateName": "Isaías Rufino Advogados & Associados",
+  "image": "https://www.isaiasrufino.adv.br/logo.webp",
+  "url": "https://www.isaiasrufino.adv.br/",
+  "telephone": "+5562984430101",
+  "email": "isaiasrufinoadv@gmail.com",
+  "description": "Advocacia especializada em Direito Militar e Direitos de Servidores Públicos em Goiás. Defesa estratégica em PADs, sindicâncias, promoções, revisão de atos disciplinares e revisão de juros abusivos em empréstimo consignado.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "R. 86-B, 75 - Qd. 33, Lt. 05 - St. Sul",
+    "addressLocality": "Goiânia",
+    "addressRegion": "GO",
+    "postalCode": "74085-350",
+    "addressCountry": "BR"
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Goiás"
+  },
+  "priceRange": "$$",
+  "sameAs": [
+    "https://www.instagram.com/isaiasrufinoadvogados/",
+    "https://www.facebook.com/isaiasrufinoadv/",
+    "https://www.linkedin.com/in/isaias-rufino-souza-0a953423b/"
+  ],
+  "knowsAbout": [
+    "Direito Militar",
+    "Direito Administrativo Disciplinar",
+    "Direitos de Servidores Públicos",
+    "Processo Administrativo Disciplinar (PAD)",
+    "Revisão de Proventos e Licença-Prêmio",
+    "Revisão de Juros Abusivos em Empréstimo Consignado"
+  ],
+  "employee": {
+    "@id": "https://www.isaiasrufino.adv.br/#isaias-rufino"
+  }
+}
+</script>
+
+<!-- Schema.org (JSON-LD) para SEO - Advogado (Person) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.isaiasrufino.adv.br/#isaias-rufino",
+  "name": "Isaías Rufino",
+  "jobTitle": "Advogado",
+  "image": "https://www.isaiasrufino.adv.br/logo.webp",
+  "url": "https://www.isaiasrufino.adv.br/",
+  "worksFor": {
+    "@id": "https://www.isaiasrufino.adv.br/#organizacao"
+  },
+  "knowsAbout": [
+    "Direito Militar",
+    "Direito Administrativo Disciplinar",
+    "Direitos de Servidores Públicos",
+    "Revisão de Juros Abusivos em Empréstimo Consignado"
+  ],
+  "sameAs": [
+    "https://www.instagram.com/isaiasrufinoadvogados/",
+    "https://www.facebook.com/isaiasrufinoadv/",
+    "https://www.linkedin.com/in/isaias-rufino-souza-0a953423b/"
+  ]
+}
+</script>
+
+<!-- Schema.org (JSON-LD) para SEO - Vídeo explicativo (VideoObject) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Entenda o processo: juros abusivos em empréstimo consignado, por Dr. Isaías Rufino",
+  "description": "Dr. Isaías Rufino explica como funciona a análise de juros abusivos em empréstimo consignado para militares e servidores públicos, e como usar a simulação de restituição disponível no site.",
+  "thumbnailUrl": "https://www.isaiasrufino.adv.br/emprest-consig.webp",
+  "uploadDate": "2025-10-28",
+  "contentUrl": "https://www.isaiasrufino.adv.br/video_consignado_dr_isaias_rufino.mp4",
+  "publisher": {
+    "@id": "https://www.isaiasrufino.adv.br/#organizacao"
+  }
+}
+</script>
 
     <!-- Schema.org (JSON-LD) para SEO - FAQPage (Rich Snippets do Google) -->
     <script type="application/ld+json">
@@ -111,6 +159,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Sim. Atuamos em ações de reintegração ao cargo ou posto, revisão de proventos de aposentadoria e reforma, licença-prêmio e demais direitos funcionais de militares e servidores públicos, sempre com base em análise técnica da carreira e do ato administrativo questionado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que são juros abusivos em empréstimo consignado e como funciona a análise?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Os juros são considerados abusivos quando ultrapassam significativamente a taxa média de mercado apurada pelo Banco Central para operações equivalentes. Militares e servidores públicos com empréstimos consignados descontados em folha podem ter direito à revisão do contrato e à restituição de valores pagos indevidamente. Por isso, disponibilizamos no site uma simulação inicial gratuita para identificar esse potencial antes de avançar com a análise técnica completa."
           }
         },
         {
@@ -248,6 +304,7 @@
                         <span class="text-[#D4AF37]">Militares</span>
                         e
                         <span class="text-[#D4AF37]">Servidores Públicos</span>
+                        em Goiânia e todo o Goiás
 
                     </h1>
 
@@ -709,7 +766,19 @@
                     </p>
                 </div>
                 <div class="border border-[#3D2E27] bg-[#1A1310] rounded-md p-4">
-                    <h3 class="font-semibold text-white text-base">5. Como são definidos os honorários advocatícios?</h3>
+                    <h3 class="font-semibold text-white text-base">5. O que são juros abusivos em empréstimo
+                        consignado e como funciona a análise?</h3>
+                    <p class="text-sm text-[#D1C7BD] mt-2 leading-relaxed">
+                        Os juros são considerados abusivos quando ultrapassam significativamente a taxa média de
+                        mercado apurada pelo Banco Central para operações equivalentes. Militares e servidores
+                        públicos com empréstimos consignados descontados em folha podem ter direito à revisão do
+                        contrato e à restituição de valores pagos indevidamente. Por isso, disponibilizamos no site
+                        uma simulação inicial gratuita para identificar esse potencial antes de avançar com a
+                        análise técnica completa.
+                    </p>
+                </div>
+                <div class="border border-[#3D2E27] bg-[#1A1310] rounded-md p-4">
+                    <h3 class="font-semibold text-white text-base">6. Como são definidos os honorários advocatícios?</h3>
                     <p class="text-sm text-[#D1C7BD] mt-2 leading-relaxed">
                         Os honorários são definidos após a análise do caso, considerando a complexidade, o tipo de
                         processo (administrativo ou judicial) e o tempo estimado de atuação. Essa avaliação é sempre
@@ -717,7 +786,7 @@
                     </p>
                 </div>
                 <div class="border border-[#3D2E27] bg-[#1A1310] rounded-md p-4">
-                    <h3 class="font-semibold text-white text-base">6. É possível acompanhar o andamento do processo à
+                    <h3 class="font-semibold text-white text-base">7. É possível acompanhar o andamento do processo à
                         distância?</h3>
                     <p class="text-sm text-[#D1C7BD] mt-2 leading-relaxed">
                         Sim. Além do acesso direto aos sistemas de consulta processual do Projudi e do Processo
